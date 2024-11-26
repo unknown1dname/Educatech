@@ -1,0 +1,10 @@
+{
+  "name": "clase",
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
+  "type": "angular"
+}
