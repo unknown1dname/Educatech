@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar class="color-principal">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/login"></ion-back-button>
+          </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <!-- Imagen principal -->
+    <ion-img class="logo-image" src="assets/images/educatech.png"></ion-img>
+
+    <!-- Botón para ir a la sección de notas -->
+    <ion-button class="ion-margin-top color-principal" expand="full" (click)="irANotas()">Ver Notas</ion-button>
+
+    <!-- Botón para ir al escáner de QR -->
+    <ion-button class="ion-margin-top color-principal" expand="full" (click)="irAAsistencia()">Asistencia</ion-button>
+</ion-content>
+

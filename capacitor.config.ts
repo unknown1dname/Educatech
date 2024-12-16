@@ -2,7 +2,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.educatech.app',
-  appName: 'Educatech',
+  appName: 'Educatech-main',
   webDir: 'www',
   "bundledWebRuntime": false,
   cordova: {

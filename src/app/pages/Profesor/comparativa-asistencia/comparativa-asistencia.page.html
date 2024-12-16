@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio-p"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Resumen de Asistencia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="scrollable-content">
+    <ion-list>
+      <ion-item *ngFor="let clase of clasesConEstudiantes">
+        <ion-label>
+          <h2>{{ clase.asignatura }}</h2>
+          <p>Fecha: {{ clase.fecha | date }}</p>
+          <p>Sección: {{ clase.seccion }}</p>
+
+          <!-- Mostrar estudiantes de cada clase con su estado -->
+          <ion-list>
+            <ion-item *ngFor="let estudiante of clase.estudiantes">
+              <ion-label>
+                <h3>{{ estudiante.nombre }}</h3>
+                <p><strong>Estado:</strong> {{ estudiante.estado }}</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

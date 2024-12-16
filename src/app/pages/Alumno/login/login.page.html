@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar class="color-principal">
+      <ion-title id="tPrincipal">Alumno</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding">
+    <ion-img class="logo-image" src="assets/images/educatech.png"></ion-img>
+  
+    <ion-content class="ion-padding">
+      <h5 style="color: red;">Por favor, ingresa tus credenciales para continuar.</h5>
+  
+      <ion-item class="color-input">
+        <ion-icon color="black" name="person-outline"></ion-icon>
+        <ion-input class="color-input" label="Usuario" label-placement="floating" [(ngModel)]="loginUsuario" required></ion-input>
+      </ion-item>
+  
+      <ion-item class="color-input">
+        <ion-icon color="black" name="lock-closed-outline"></ion-icon>
+        <ion-input label="Contraseña" label-placement="floating" [(ngModel)]="loginContrasena" type="password" required></ion-input>
+      </ion-item>
+  
+      <ion-button class="ion-margin-top color-principal" expand="full" (click)="validarCredenciales()">Inicio de sesión</ion-button>
+  
+      <ion-text>
+        <p class="ion-text-center recuperar-link" [routerLink]="['/recuperar']">Recuperar contraseña</p>
+      </ion-text>
+
+      <ion-text>
+        <p class="ion-text-center registro-link" [routerLink]="['/registro']">Registrate aqui para poder acceder</p>
+    </ion-text>
+
+     
+  
+     
+    </ion-content>
+  </ion-content>
+  

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio-p"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Generar Código QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+      <ion-label class="color-input">Sección</ion-label>
+      <ion-select [(ngModel)]="seccion">
+        <ion-select-option value="002D">002D</ion-select-option>
+        <ion-select-option value="003D">003D</ion-select-option>
+        <ion-select-option value="004D">004D</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label class="color-input">Asignatura</ion-label>
+      <ion-select [(ngModel)]="asignatura" class="color-input">
+        <ion-select-option value="Calidad de Sofware">Calidad de Software</ion-select-option>
+        <ion-select-option value="Ingles Intermedio">Ingles Elemental</ion-select-option>
+        <ion-select-option value="Proceso de Portafolio 4">Proceso de Portafolio 4</ion-select-option>
+        <ion-select-option value="Arquitectura">Arquitectura</ion-select-option>
+        <ion-select-option value="Etica para el trabajo">Etica para el trabajo</ion-select-option>
+        <ion-select-option value="Desarrollo de Aplicaciones Moviles">Desarrollo de Aplicaciones Moviles</ion-select-option>
+        <ion-select-option value="Estadistica Descriptiva">Estadistica Descriptiva</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" (click)="generarCodigoQR()" class="ion-margin-top">Generar Codigo QR</ion-button>
+  
+
+  <div *ngIf="codigoQR">
+    <ion-img [src]="codigoQR"></ion-img>
+  </div>
+</ion-content>

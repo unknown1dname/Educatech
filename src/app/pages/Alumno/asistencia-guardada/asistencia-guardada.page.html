@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Asistencia Registrada</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="success-container">
+    <ion-icon name="checkmark-circle" size="large" color="success"></ion-icon>
+    <h2>¡Asistencia Registrada con Éxito!</h2>
+    <p>Tu asistencia ha sido guardada correctamente.</p>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Detalles de la Asistencia</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Asignatura:</strong> {{ asignatura }}</p>
+        <p><strong>Sección:</strong> {{ seccion }}</p>
+        <p><strong>Fecha:</strong> {{ fecha }}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button expand="full" color="primary" (click)="volverInicio()">Volver al Inicio</ion-button>
+  </div>
+</ion-content>
